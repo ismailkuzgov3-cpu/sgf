@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Климат Комфорт — Магазин отопления</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">🔥 Климат <span>Комфорт</span></div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Поиск: котёл, радиатор, насос...">
+    <button onclick="doSearch()">🔍</button>
+  </div>
+  <div class="nav-links" id="navLinks"></div>
+</header>
+
+<section class="hero">
+  <h1>Всё для отопления вашего дома</h1>
+  <p>Котлы • Радиаторы • Насосы • Трубы • Автоматика</p>
+</section>
+
+<div class="categories" id="categories"></div>
+
+<!-- КАЛЬКУЛЯТОР -->
+<div style="padding:0 30px 20px;">
+  <div style="background:white;padding:20px;border-radius:14px;box-shadow:var(--shadow);">
+    <h3 style="margin-bottom:12px;">🧮 Калькулятор мощности котла</h3>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <input type="number" id="areaInput" placeholder="Площадь дома (м²)" style="padding:11px;border:1px solid #ddd;border-radius:10px;flex:1;min-width:180px;">
+      <button onclick="calcBoiler()" style="padding:11px 22px;border:none;border-radius:10px;background:var(--primary);color:white;cursor:pointer;font-weight:600;">Рассчитать</button>
+    </div>
+    <p id="calcResult" style="margin-top:12px;font-weight:600;color:var(--primary);"></p>
+  </div>
+</div>
+
+<div class="products" id="productsGrid"></div>
+
+<script src="js/products.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
